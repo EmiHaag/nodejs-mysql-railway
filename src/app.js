@@ -1,19 +1,19 @@
 import express from "express";
-import { pino } from "pino";
-import { pool } from "./db.js";
+//import { pino } from "pino";
+//import { pool } from "./db.js";
 import { PORT } from "./config.js";
 
-const logger = pino();
+//const logger = pino();
 const app = express();
 
 app.listen(PORT);
 
-app.get("/", async (req, res) => {
+app.get("/", (req, res) => {
   //const [rows] = await pool.query(`SELECT * FROM users`);
   //res.json(rows);
   res.send("Servicio disponible");
 });
-app.get("/ping", async (req, res) => {
+/* app.get("/ping", async (req, res) => {
   const [result] = await pool.query(`SELECT "hello world" as RESULT `);
   res.json(result[0]);
 });
@@ -21,7 +21,7 @@ app.get("/ping", async (req, res) => {
 app.get("/create", async (req, res) => {
   const result = await pool.query(`INSERT INTO users(name) VALUES("EMI") `);
   res.json(result);
-});
+}); */
 
 console.log("Server on port ", PORT);
 //logger.info("Server on port ", PORT);
