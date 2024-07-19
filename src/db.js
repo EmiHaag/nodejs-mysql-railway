@@ -9,8 +9,6 @@ export const pool = await createPool({
   port: DB_PORT,
 });
 
-pool.q;
-
 //CMD
 //mysql -u root -p
 //CREATE DATABASE namedb;
