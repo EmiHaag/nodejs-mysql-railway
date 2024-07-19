@@ -8,10 +8,10 @@ const app = express();
 
 app.listen(PORT);
 
-app.get("/", (req, res) => {
-  //const [rows] = await pool.query(`SELECT * FROM users`);
-  //res.json(rows);
-  res.send("Servicio disponible");
+app.get("/", async (req, res) => {
+  const [rows] = await pool.query(`SELECT * FROM users`);
+  res.json(rows);
+  //res.send("Servicio disponible");
 });
 /* app.get("/ping", async (req, res) => {
   const [result] = await pool.query(`SELECT "hello world" as RESULT `);
