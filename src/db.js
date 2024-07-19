@@ -7,6 +7,8 @@ export const pool = await createPool({
   host: DB_HOST,
   database: DB_NAME,
   port: DB_PORT,
+  connectTimeout: 10000,
+  acquireTimeout: 10000,
   waitForConnections: true,
   connectionLimit: 10,
   queueLimit: 0,
