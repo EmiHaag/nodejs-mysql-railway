@@ -1,6 +1,6 @@
 import express from "express";
 //import { pino } from "pino";
-//import { pool } from "./db.js";
+import { pool } from "./db.js";
 import { PORT } from "./config.js";
 
 //const logger = pino();
