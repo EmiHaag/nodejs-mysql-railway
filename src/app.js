@@ -13,15 +13,17 @@ app.get("/", async (req, res) => {
   res.json(rows);
   //res.send("Servicio disponible");
 });
-/* app.get("/ping", async (req, res) => {
+app.get("/ping", async (req, res) => {
   const [result] = await pool.query(`SELECT "hello world" as RESULT `);
   res.json(result[0]);
 });
 
 app.get("/create", async (req, res) => {
-  const result = await pool.query(`INSERT INTO users(name) VALUES("EMI") `);
+  const result = await pool.query(
+    `INSERT INTO users(nombre_fantasia) VALUES("EMI") `
+  );
   res.json(result);
-}); */
+});
 
 console.log("Server on port ", PORT);
 //logger.info("Server on port ", PORT);
